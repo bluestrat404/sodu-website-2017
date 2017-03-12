@@ -2,6 +2,7 @@
 	Story by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Modified by Adam Darnell
 */
 
 (function($) {
@@ -352,6 +353,124 @@
 
 							});
 
+			// HTML Modals
+				$('.html-lightbox')
+					.on('click', 'a.html-modal', function(event) {
+
+						var $a = $(this),
+							$gallery = $a.parents('.html-lightbox'),
+							$modal = $gallery.children('.modal'),
+							$modalHtml = $modal.find('div'),
+							href = $a.attr('href');
+
+						// Prevent default.
+							event.preventDefault();
+							event.stopPropagation();
+
+						// Locked? Bail.
+							if ($modal[0]._locked)
+								return;
+
+						// Lock.
+							$modal[0]._locked = true;
+
+						// Set visible.
+							$modal.addClass('visible');
+
+						// Set html.
+							$.get( "snippets/" + href , function( data ) {
+							  $( ".html-lightbox .modal .inner" ).html( data );
+
+							// Set loaded.
+								$modal.addClass('loaded');
+
+							// Focus.
+								$modal.focus();
+
+							// Delay.
+								setTimeout(function() {
+
+									// Unlock.
+										$modal[0]._locked = false;
+
+								}, 600);
+
+							});
+
+					})
+					// .on('click', '.html-lightbox-modal', function(event) {
+					// 	event.stopPropagation();
+					// })
+					.on('click', '.modal', function(event) {
+
+						var $modal = $(this),
+							$modalHtml = $modal.find('div');
+
+						// Locked? Bail.
+							if ($modal[0]._locked)
+								return;
+
+						// Already hidden? Bail.
+							if (!$modal.hasClass('visible'))
+								return;
+
+						// Lock.
+							$modal[0]._locked = true;
+
+						// Clear visible, loaded.
+							$modal
+								.removeClass('loaded')
+
+						// Delay.
+							setTimeout(function() {
+
+								$modal
+									.removeClass('visible')
+
+								setTimeout(function() {
+
+									// Clear html.
+										$modalHtml.html('');
+
+									// Unlock.
+										$modal[0]._locked = false;
+
+									// Focus.
+										$body.focus();
+
+								}, 475);
+
+							}, 125);
+
+					})
+					.on('keypress', '.modal', function(event) {
+
+						var $modal = $(this);
+
+						// Escape? Hide modal.
+							if (event.keyCode == 27)
+								$modal.trigger('click');
+
+					})
+					.prepend('<div class="modal" tabIndex="-1"><div class="inner html-lightbox-modal"></div></div>');
+						// .find('.inner')
+						// 	.on('load', function(event) {
+						//
+						// 		var $modalImg = $(this),
+						// 			$modal = $modalImg.parents('.modal');
+						//
+						// 		setTimeout(function() {
+						//
+						// 			// No longer visible? Bail.
+						// 				if (!$modal.hasClass('visible'))
+						// 					return;
+						//
+						// 			// Set loaded.
+						// 				$modal.addClass('loaded');
+						//
+						// 		}, 275);
+						//
+						// 	});
 	});
 
 })(jQuery);
