@@ -6878,7 +6878,7 @@
 		}
 	}
 
-	.gallery.lightbox .modal {
+	.gallery.lightbox .modal, .html-lightbox .modal {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -6916,7 +6916,7 @@
 		z-index: 0;
 	}
 
-		.gallery.lightbox .modal:before {
+		.gallery.lightbox .modal:before, .html-lightbox .modal:before {
 			-moz-animation: gallery-modal-spinner 1s infinite linear;
 			-webkit-animation: gallery-modal-spinner 1s infinite linear;
 			-ms-animation: gallery-modal-spinner 1s infinite linear;
@@ -6944,7 +6944,7 @@
 			opacity: 0;
 		}
 
-		.gallery.lightbox .modal:after {
+		.gallery.lightbox .modal:after, .html-lightbox .modal:after {
 			content: '';
 			display: block;
 			position: absolute;
@@ -6959,7 +6959,7 @@
 			background-size: 3rem;
 		}
 
-		.gallery.lightbox .modal .inner {
+		.gallery.lightbox .modal .inner, .html-lightbox .modal .inner {
 			-moz-transform: translateY(0.75rem);
 			-webkit-transform: translateY(0.75rem);
 			-ms-transform: translateY(0.75rem);
@@ -6978,7 +6978,7 @@
 				box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.35);
 			}
 
-		.gallery.lightbox .modal.visible {
+		.gallery.lightbox .modal.visible, .html-lightbox .modal.visible {
 			-moz-pointer-events: auto;
 			-webkit-pointer-events: auto;
 			-ms-pointer-events: auto;
@@ -6988,11 +6988,11 @@
 			z-index: 10001;
 		}
 
-			.gallery.lightbox .modal.visible:before {
+			.gallery.lightbox .modal.visible:before, .html-lightbox .modal.visible:before {
 				opacity: 1;
 			}
 
-		.gallery.lightbox .modal.loaded .inner {
+		.gallery.lightbox .modal.loaded .inner, .html-lightbox .modal.loaded .inner {
 			-moz-transform: translateY(0);
 			-webkit-transform: translateY(0);
 			-ms-transform: translateY(0);
@@ -7004,7 +7004,7 @@
 			opacity: 1;
 		}
 
-		.gallery.lightbox .modal.loaded:before {
+		.gallery.lightbox .modal.loaded:before, .html-lightbox .modal.loaded:before {
 			-moz-transition-delay: 0s;
 			-webkit-transition-delay: 0s;
 			-ms-transition-delay: 0s;

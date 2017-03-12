@@ -10,29 +10,51 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/nav.css" />
+		<link href="http://www.southdurham.org/images/SDC-Logo-favico.gif" rel="shortcut icon" />
 	</head>
 	<body>
-		<!-- Nav -->
-		<!-- <div id="mySidenav" class="sidenav">
-		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		  <a href="#">About</a>
-		  <a href="#">Services</a>
-		  <a href="#">Clients</a>
-		  <a href="#">Contact</a>
-		</div> -->
+		<!-- NavBar -->
+		<div class="navbar">
+			<!-- Use any element to open the sidenav -->
+			<div class="nav icon fa-bars" onclick="toggleNav()"><span>Menu</span></div>
+		</div>
 
-		<!-- Use any element to open the sidenav -->
-		<!-- <span onclick="openNav()">open</span> -->
+		<!-- Nav -->
+		<div class="sidenav-wrapper html-lightbox">
+			<div id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+			  <a href="#first" class="smooth-scroll-middle" onclick="toggleNav()">Sunday Details</a>
+				<a href="#latest-sermon" class="smooth-scroll-middle" onclick="toggleNav()">Sermons</a>
+			  <a href="#more-info" class="smooth-scroll" onclick="toggleNav()">More Info</a>
+			  <a href="giving.html" class="html-modal">Giving</a>
+				<h3>Join us this weekend</h3>
+				<p>Sundays at 10 a.m.<br>
+					4915 Barbee Rd.<br>
+					Durham, NC<br>
+					<span class="icons"><a href="https://www.google.com/maps/place/South+Durham+Church/@35.931954,-78.9100417,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace5f29915c2df:0x42efe4e7f5b733cf!8m2!3d35.931954!4d-78.907853?hl=en" class="directions icon fa-location-arrow"><span>Directions</span></a></span>
+				</p>
+
+				<ul class="icons">
+					<li><a href="http://www.twitter.com/SoDuChurch" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/pages/South-Durham-Church/252410808121273" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/southdurhamchurch/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://sodu.slack.com/" class="icon style2 fa-slack"><span class="label">Slack</span></a></li>
+					<li><a href="https://sodu.churchcenteronline.com/giving" class="icon style2 fa-usd"><span class="label">Giving</span></a></li>
+					<li><a href="mailto:office@southdurham.org" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</div>
+		</div>
+
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
-
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<img src="images/SDC-LogoRGB.jpg" alt="South Durham Church" style="width: 90%;" />
+							<img src="images/SDC-LogoRGB.jpg" alt="South Durham Church" style="width: 100%;" />
 							<h1>Questions Welcome</h1>
-							<p class="major"><!--[-->We're here to help our friends and neighbors find they joy they were made for in Jesus Christ. We don't care what your background is, what you look like, or who you vote for. We're saving you a seat this Sunday!<!--]--></p>
+							<p class="major"><!--[-->We're here to help our friends and neighbors find the joy they were made for in Jesus Christ. No matter your background, we're saving you a seat this Sunday!<!--]--></p>
 							<ul class="actions vertical">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">Sunday Details</a></li>
 							</ul>
@@ -48,9 +70,9 @@
 							<h2>Welcome to SoDu!</h2>
 							<p>South Durham Church is a growing family of people who love Jesus, love each other, and have a passion to serve our community.</p>
 							<p>You're welcome here, wherever you are with God and whatever questions you have. Come hang out and worship with us this Sunday. We look forward to meeting you.</p>
-							<h3>Sundays at 10 a.m.<br>4915 Barbee Rd., Durham, NC 27713<br>(Pearsontown Elementary School)</h3>
+							<h3>Sundays at 10 a.m.<br><a href="https://www.google.com/maps/place/4915+Barbee+Rd,+Durham,+NC+27713/@35.931954,-78.9100417,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace5f29915c2df:0xef9c288d1f2e4431!8m2!3d35.931954!4d-78.907853?hl=en">4915 Barbee Rd., Durham, NC 27713&nbsp;&nbsp;<span class="icon fa-location-arrow"></span></a><br>(Pearsontown Elementary School)</h3>
 							<!-- <ul class="actions vertical">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a href="https://www.google.com/maps/place/4915+Barbee+Rd,+Durham,+NC+27713/@35.931954,-78.9100417,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace5f29915c2df:0xef9c288d1f2e4431!8m2!3d35.931954!4d-78.907853?hl=en" class="button">Directions</a></li>
 							</ul> -->
 						</div>
 						<div class="image">
@@ -61,14 +83,15 @@
 				<!-- Three -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>Parking and Childcare</h2>
-							<p>Look for South Durham Church signs to guide you into the parking lot. Friendly faces will be waiting to greet you at the main door (look for the Welcome sign), hand you the morning's program, and guide you to the childcare check-in station or the auditorium.</p>
+							<h2>What to Expect</h2>
+							<p>When you arrive, look for South Durham Church signs to guide you into the parking lot. Friendly faces will be waiting to greet you (look for the Welcome sign), hand you the morning's bulletin, and guide you to the childcare check-in station or the auditorium.</p>
+							<p>When you enter the auditorium, you can find your seat. The worship service will include contemporary and traditional songs, a sermon, and Communion. An offering is collected, but guests are not expected to give. The bulletin you receive will walk you through each part of the service, so you won't feel lost.</p>
 							<!-- <ul class="actions vertical">
 								<li><a href="#" class="button">Learn More</a></li>
 							</ul> -->
 						</div>
 						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
+							<img src="images/spotlight02a.jpg" alt="" />
 						</div>
 					</section>
 
@@ -76,7 +99,7 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Early Childhood and Elementary</h2>
-							<p>During our worship service, we teach children about the great God of the Bible who loves them in a fun, engaging, and secure setting we call SoDu Kids. Our great volunteers teach age-appropriate lessons, in separate classes, for toddlers through fifth grade, and childcare is available for babies.</p>
+							<p>During our worship service, children under the age of five are cared for in a fun, engaging, and secure environment. At 9 a.m., we teach children about the great God of the Bible who loves them. Our great volunteers teach age-appropriate lessons, in separate classes, for toddlers through fifth grade, and childcare is available for babies.</p>
 							<!-- <ul class="actions vertical">
 								<li><a href="#" class="button">Learn More</a></li>
 							</ul> -->
@@ -244,7 +267,17 @@
 					</section>
 
 				<!-- Six -->
-					<section class="wrapper style1 align-center">
+					<section class="wrapper style1 align-center" id="latest-sermon">
+						<div class="inner">
+							<h2>Latest Sermon</h2>
+							<h3>Evil and Its End &mdash; Daniel 7&ndash;8 &mdash; Adam Darnell<br>Resolve: The Book of Daniel</h3>
+							<p>One day God will end all evil, so we can live with hope and courage in a world that's often hostile.</p>
+							<audio id="audio-5065-1" preload="none" style="width: 100%;" controls="controls"><source type="audio/mpeg" src="http://sermons.southdurham.org/wp-content/uploads/sermons/2017/03/2017.03.05-Sermon.mp3?_=1" /><a
+href="http://www.southdurham.org/wp-content/uploads/sermons/2017/03/2017.03.05-Sermon.mp3">http://www.southdurham.org/wp-content/uploads/sermons/2017/03/2017.03.05-Sermon.mp3</a></audio>
+							<p><a href="http://sermons.southdurham.org/">Sermon Archive</a> &bull; <a href="http://sermons.southdurham.org/sermons/feed/">Podcast Feed</a></p>
+						</div>
+					</section>
+					<section class="wrapper style1 align-center html-lightbox" id="more-info">
 						<div class="inner">
 							<h2>More Info</h2>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p> -->
@@ -252,32 +285,32 @@
 								<section>
 									<span class="icon style2 major fa-book"></span>
 									<h3>Our Beliefs</h3>
-									<p>The Bible is the inspired Word of God, without error, and the final authority for life. God is one, in three persons: Father, Son, and Holy Spirit. <a href="#">Read more</a></p>
+									<p>The Bible is the inspired Word of God, without error, and the final authority for life. God is one, in three persons: Father, Son, and Holy Spirit. <a href="beliefs.html" class="html-modal">Read more</a></p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-child"></span>
+									<h3>Our Leadership</h3>
+									<p>South Durham Church is led by a team of elders, including <a href="pastor.html" class="html-modal">Pastor Adam Darnell</a>, who preaches most Sundays. Ministry Team leaders and staff support the work of the church.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-heart"></span>
 									<h3>Serving</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-child"></span>
-									<h3>Community Events</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<p>We want to bring our community together to serve our community. <a href="http://eepurl.com/bLoQOX" target="_blank">Sign up here</a> to get notifications about our regular Serve SoDu events, including the annual Love South Durham Festival.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-globe"></span>
 									<h3>International Ministry</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<p>The Gospel is for every nation, so we send teams to serve and share the love of Jesus around the world. We do the same for internationals in our own backyard.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-users"></span>
 									<h3>Small Groups</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<p>People were made for community. We're starting new small groups all the time where you can be known, be loved, and get to know God better, with others.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-home"></span>
 									<h3>Belonging</h3>
-									<p>Church is a family. We're here for each other, and we want to love each other like Christ has loved us. <a href="#">Read more</a></p>
+									<p>Church is a family of people who have been adopted by God. We're here for each other, and we want to love each other like Christ has loved us. <a href="belonging.html" class="html-modal">Read more</a></p>
 								</section>
 								<!-- <section>
 									<span class="icon style2 major fa-desktop"></span>
@@ -314,7 +347,7 @@
 					</section>
 
 				<!-- Seven -->
-					<section class="wrapper style1 align-center">
+					<!-- <section class="wrapper style1 align-center">
 						<div class="inner medium">
 							<h2>Get in touch</h2>
 							<form method="post" action="#">
@@ -336,7 +369,7 @@
 							</form>
 
 						</div>
-					</section>
+					</section> -->
 
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
@@ -349,7 +382,7 @@
 								<li><a href="https://sodu.churchcenteronline.com/giving" class="icon style2 fa-usd"><span class="label">Giving</span></a></li>
 								<li><a href="mailto:office@southdurham.org" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<p>&copy; South Durham Church. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							<p>&copy; South Durham Church &bull; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
 					</footer>
 
@@ -362,6 +395,16 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/nav.js"></script>
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-49576446-1', 'auto');
+			  ga('send', 'pageview');
+			</script>
 
 	</body>
 </html>
