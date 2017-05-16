@@ -1,0 +1,43 @@
+#header:before {
+  background: none;
+}
+
+img.logo-img {
+  width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  img.logo-img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  img.logo-img {
+    width: 100%;
+  }
+}
+
+td:first-child {
+  min-width: 90px;
+}
+
+.button {
+  background: #4d5254;
+}
+
+.button:hover {
+  background: #656c70;
+}
+
+div#footer {
+  background-color: #524437;
+}
+
+#footer .button {
+  color: #524437;
+}
+
+.image:after {
+  opacity: 0.1;
+}
